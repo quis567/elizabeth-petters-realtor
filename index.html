@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Elizabeth Petters | Realtor · Coldwell Banker Realty · Winter Park, FL</title>
+<meta name="description" content="Elizabeth Petters — 20-year Orlando realtor specializing in Winter Park, Windermere, Isleworth, Baldwin Park, Maitland, College Park, and Dr. Phillips. Orlando's Realtor of the Year 2023." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --cream: #F3EEE4;
+    --cream-light: #FAF6EE;
+    --ink: #1E2A24;
+    --ink-soft: #2E3A32;
+    --body: #4A463E;
+    --muted: #7A7468;
+    --brass: #B08D57;
+    --brass-deep: #8E6E3F;
+    --sage: #D8DED1;
+    --line: rgba(30, 42, 36, 0.12);
+    --line-soft: rgba(30, 42, 36, 0.06);
+    --radius-lg: 22px;
+    --radius-md: 14px;
+    --radius-sm: 8px;
+    --shadow-card: 0 1px 2px rgba(30, 42, 36, 0.04), 0 12px 40px rgba(30, 42, 36, 0.06);
+    --serif: 'Cormorant Garamond', 'Times New Roman', serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  body {
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--body);
+    background: var(--cream);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--serif);
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    line-height: 1.08;
+  }
+  h1 { font-size: clamp(2.6rem, 6.2vw, 5.4rem); font-weight: 400; }
+  h2 { font-size: clamp(2rem, 4.4vw, 3.6rem); font-weight: 400; }
+  h3 { font-size: clamp(1.4rem, 2.2vw, 1.9rem); font-weight: 500; }
+
+  p { color: var(--body); }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+
+  .container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* Eyebrow */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--brass-deep);
+  }
+  .eyebrow::before,
+  .eyebrow::after {
+    content: '';
+    width: 22px;
+    height: 1px;
+    background: var(--brass);
+  }
+  .eyebrow.center { justify-content: center; }
+
+  /* Pill button */
+  .btn-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--cream-light);
+    background: var(--ink);
+    padding: 6px 6px 6px 26px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.4s var(--ease), background 0.3s var(--ease);
+  }
+  .btn-pill .arrow {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--brass);
+    display: grid;
+    place-items: center;
+    transition: transform 0.4s var(--ease);
+  }
+  .btn-pill:hover { background: var(--ink-soft); }
+  .btn-pill:hover .arrow { transform: rotate(-45deg); }
+  .btn-pill svg { width: 14px; height: 14px; stroke: var(--ink); }
+
+  .btn-pill.inverse { background: var(--cream-light); color: var(--ink); }
+  .btn-pill.inverse:hover { background: #fff; }
+  .btn-pill.inverse .arrow { background: var(--ink); }
+  .btn-pill.inverse svg { stroke: var(--cream-light); }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink);
+    padding: 14px 0;
+    border-bottom: 1px solid var(--ink);
+    transition: color 0.3s var(--ease), border-color 0.3s var(--ease);
+  }
+  .btn-ghost:hover { color: var(--brass-deep); border-color: var(--brass); }
+
+  /* Nav */
+  .nav {
+    position: fixed;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    width: min(1340px, calc(100% - 40px));
+    background: rgba(250, 246, 238, 0.86);
+    backdrop-filter: saturate(140%) blur(18px);
+    -webkit-backdrop-filter: saturate(140%) blur(18px);
+    border: 1px solid var(--line);
+    border-radius: 80px;
+    padding: 12px 14px 12px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: top 0.4s var(--ease), box-shadow 0.4s var(--ease);
+  }
+  .nav.scrolled { box-shadow: 0 18px 50px rgba(30, 42, 36, 0.08); }
+  .nav__brand {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .nav__brand .brand-mark {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background: var(--brass);
+    border-radius: 50%;
+    transform: translateY(-3px);
+  }
+  .nav__links {
+    display: flex;
+    gap: 34px;
+    list-style: none;
+  }
+  .nav__links a {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--ink-soft);
+    letter-spacing: 0.02em;
+    transition: color 0.25s var(--ease);
+  }
+  .nav__links a:hover { color: var(--brass-deep); }
+  .nav__cta { display: flex; align-items: center; gap: 16px; }
+  .nav__phone {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--ink);
+    display: inline-block;
+  }
+  @media (max-width: 1024px) { .nav__phone { display: none; } }
+  .nav__menu-btn {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--ink);
+    color: var(--cream-light);
+    border: none;
+    cursor: pointer;
+    place-items: center;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 160px 0 90px;
+    position: relative;
+  }
+  .hero__grid {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .hero__copy h1 {
+    margin: 28px 0 32px;
+  }
+  .hero__copy h1 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--brass-deep);
+  }
+  .hero__sub {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--body);
+    max-width: 440px;
+    margin-bottom: 40px;
+  }
+  .hero__ctas {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+    margin-bottom: 52px;
+  }
+  .hero__meta {
+    display: flex;
+    gap: 44px;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+  }
+  .hero__meta-item .num {
+    font-family: var(--serif);
+    font-size: 42px;
+    font-weight: 400;
+    color: var(--ink);
+    line-height: 1;
+    display: block;
+  }
+  .hero__meta-item .label {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 8px;
+    display: block;
+    max-width: 160px;
+  }
+
+  .hero__visual {
+    position: relative;
+    height: 640px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+  .hero__visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .hero__portrait-tag {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    background: rgba(250, 246, 238, 0.94);
+    backdrop-filter: blur(10px);
+    padding: 14px 20px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .hero__portrait-tag img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 20%;
+  }
+  .hero__portrait-tag .tag-text { line-height: 1.3; }
+  .hero__portrait-tag .tag-text strong {
+    font-family: var(--serif);
+    font-size: 17px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .hero__portrait-tag .tag-text span {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .hero__rating {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: var(--ink);
+    color: var(--cream-light);
+    border-radius: 14px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .hero__rating .stars { color: var(--brass); letter-spacing: 2px; font-size: 13px; }
+  .hero__rating .rating-text { font-size: 12px; line-height: 1.4; }
+  .hero__rating .rating-text strong { font-family: var(--serif); font-size: 16px; display: block; }
+
+  /* Section base */
+  section { padding: 110px 0; }
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+    margin-bottom: 64px;
+  }
+  .section-head__left { max-width: 640px; }
+  .section-head h2 { margin-top: 20px; }
+  .section-head__intro {
+    font-size: 16px;
+    color: var(--body);
+    max-width: 360px;
+    margin-top: 8px;
+  }
+
+  /* About */
+  .about {
+    background: var(--cream-light);
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .about__grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .about__visual {
+    position: relative;
+  }
+  .about__portrait {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    aspect-ratio: 4/5;
+  }
+  .about__portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .about__badge {
+    position: absolute;
+    right: -22px;
+    bottom: 44px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: var(--ink);
+    color: var(--cream-light);
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 20px;
+    box-shadow: var(--shadow-card);
+  }
+  .about__badge .num {
+    font-family: var(--serif);
+    font-size: 38px;
+    line-height: 1;
+    color: var(--brass);
+  }
+  .about__badge .label {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-top: 8px;
+    color: var(--cream-light);
+    line-height: 1.4;
+  }
+
+  .about__copy h2 { margin: 24px 0 28px; max-width: 520px; }
+  .about__copy p {
+    font-size: 16.5px;
+    line-height: 1.75;
+    margin-bottom: 20px;
+    max-width: 540px;
+  }
+  .about__copy p:first-of-type::first-letter {
+    font-family: var(--serif);
+    font-size: 62px;
+    line-height: 0.8;
+    float: left;
+    padding: 8px 14px 0 0;
+    color: var(--brass-deep);
+    font-weight: 500;
+  }
+
+  .about__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid var(--line);
+  }
+  .about__stat .num {
+    font-family: var(--serif);
+    font-size: 36px;
+    color: var(--ink);
+    line-height: 1;
+    display: block;
+  }
+  .about__stat .num sup {
+    font-size: 18px;
+    color: var(--brass);
+    margin-left: 4px;
+  }
+  .about__stat .label {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 10px;
+  }
+
+  /* Markets */
+  .markets { background: var(--cream); }
+  .markets__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .market-card {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    aspect-ratio: 4/5;
+    cursor: pointer;
+    transition: transform 0.5s var(--ease);
+  }
+  .market-card:hover { transform: translateY(-4px); }
+  .market-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s var(--ease);
+  }
+  .market-card:hover img { transform: scale(1.06); }
+  .market-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(30, 42, 36, 0) 45%, rgba(30, 42, 36, 0.82) 100%);
+  }
+  .market-card__content {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--cream-light);
+  }
+  .market-card__num {
+    align-self: flex-start;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--cream-light);
+    background: rgba(30, 42, 36, 0.45);
+    backdrop-filter: blur(8px);
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(250, 246, 238, 0.3);
+  }
+  .market-card__name {
+    font-family: var(--serif);
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.1;
+  }
+  .market-card__tag {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--brass);
+    margin-bottom: 6px;
+  }
+  .market-card__desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(250, 246, 238, 0.85);
+    max-width: 520px;
+    margin-top: 14px;
+  }
+  .market-card--wide {
+    grid-column: 1 / -1;
+    aspect-ratio: auto;
+    min-height: 360px;
+  }
+  .market-card--wide .market-card__name {
+    font-size: 40px;
+  }
+  .market-card--wide .market-card__content {
+    padding: 40px 44px;
+  }
+  @media (max-width: 1024px) {
+    .market-card--wide { min-height: 300px; }
+    .market-card--wide .market-card__name { font-size: 30px; }
+  }
+
+  /* Services (dark) */
+  .services {
+    background: var(--ink);
+    color: var(--cream-light);
+    position: relative;
+  }
+  .services h2 { color: var(--cream-light); }
+  .services .eyebrow { color: var(--brass); }
+  .services .eyebrow::before, .services .eyebrow::after { background: var(--brass); }
+  .services__intro { color: rgba(250, 246, 238, 0.75); max-width: 380px; }
+
+  .services__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 16px;
+  }
+  .service-card {
+    background: #2A3630;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.4s var(--ease);
+  }
+  .service-card:hover { background: #324037; }
+  .service-card__img {
+    aspect-ratio: 16/10;
+    overflow: hidden;
+  }
+  .service-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s var(--ease);
+  }
+  .service-card:hover .service-card__img img { transform: scale(1.05); }
+  .service-card__body {
+    padding: 32px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .service-card__icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--brass);
+    display: grid;
+    place-items: center;
+    margin-bottom: 24px;
+  }
+  .service-card__icon svg { width: 22px; height: 22px; stroke: var(--ink); fill: none; }
+  .service-card h3 { color: var(--cream-light); margin-bottom: 14px; }
+  .service-card p {
+    color: rgba(250, 246, 238, 0.72);
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+    flex: 1;
+  }
+  .service-card__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--brass);
+    text-transform: uppercase;
+    padding-top: 20px;
+    border-top: 1px solid rgba(250, 246, 238, 0.1);
+  }
+
+  /* Credentials */
+  .credentials {
+    background: var(--cream);
+    padding: 90px 0;
+  }
+  .credentials__head {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  .credentials__list {
+    list-style: none;
+  }
+  .credentials__row {
+    display: grid;
+    grid-template-columns: 72px 1fr 1fr 120px;
+    align-items: center;
+    gap: 32px;
+    padding: 28px 8px;
+    border-top: 1px solid var(--line);
+  }
+  .credentials__row:last-child { border-bottom: 1px solid var(--line); }
+  .credentials__icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--sage);
+    display: grid;
+    place-items: center;
+  }
+  .credentials__icon svg { width: 24px; height: 24px; stroke: var(--ink); fill: none; }
+  .credentials__row h4 {
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+  }
+  .credentials__row .title {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--ink);
+  }
+  .credentials__row .year {
+    font-family: var(--serif);
+    font-size: 18px;
+    color: var(--muted);
+    text-align: right;
+  }
+
+  /* Testimonial */
+  .testimonial {
+    background: var(--ink);
+    color: var(--cream-light);
+    padding: 130px 0;
+    text-align: center;
+  }
+  .testimonial .quote {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(1.8rem, 3.4vw, 2.8rem);
+    font-weight: 400;
+    line-height: 1.3;
+    max-width: 900px;
+    margin: 32px auto 40px;
+    color: var(--cream-light);
+  }
+  .testimonial .quote::before {
+    content: '"';
+    font-size: 5rem;
+    line-height: 0;
+    color: var(--brass);
+    margin-right: 8px;
+    vertical-align: -22px;
+  }
+  .testimonial .attrib {
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--brass);
+  }
+
+  /* Community */
+  .community { background: var(--cream-light); }
+  .community__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .community__copy h2 { margin: 20px 0 24px; }
+  .community__copy p {
+    font-size: 16px;
+    line-height: 1.75;
+    max-width: 480px;
+    margin-bottom: 18px;
+  }
+  .community__affil {
+    list-style: none;
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+  }
+  .community__affil li {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .community__affil li:last-child { border-bottom: none; }
+  .community__affil .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--brass);
+    margin-top: 10px;
+    flex-shrink: 0;
+  }
+  .community__affil strong {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .community__affil span { font-size: 14px; color: var(--muted); }
+
+  .community__visual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .community__visual img {
+    border-radius: var(--radius-md);
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    width: 100%;
+  }
+  .community__visual img:nth-child(1) { margin-top: 60px; }
+  .community__visual img:nth-child(2) { margin-bottom: 60px; }
+
+  /* Contact */
+  .contact {
+    background: var(--cream);
+    padding: 120px 0;
+  }
+  .contact__shell {
+    background: var(--ink);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    color: var(--cream-light);
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+  }
+  .contact__left {
+    padding: 64px 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: linear-gradient(135deg, rgba(30, 42, 36, 0.85), rgba(30, 42, 36, 0.95)), url('assets/img/footer-hero.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  .contact__left h2 { color: var(--cream-light); margin: 20px 0 22px; }
+  .contact__left .eyebrow { color: var(--brass); }
+  .contact__left .eyebrow::before, .contact__left .eyebrow::after { background: var(--brass); }
+  .contact__left p { color: rgba(250, 246, 238, 0.82); margin-bottom: 48px; max-width: 360px; }
+  .contact__details { list-style: none; }
+  .contact__details li {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 18px 0;
+    border-top: 1px solid rgba(250, 246, 238, 0.12);
+  }
+  .contact__details li:last-child { border-bottom: 1px solid rgba(250, 246, 238, 0.12); }
+  .contact__details .icon {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: var(--brass);
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+  }
+  .contact__details svg { width: 16px; height: 16px; stroke: var(--ink); fill: none; }
+  .contact__details .label {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(250, 246, 238, 0.55);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .contact__details .value {
+    font-family: var(--serif);
+    font-size: 18px;
+    color: var(--cream-light);
+    line-height: 1.4;
+  }
+
+  .contact__form {
+    padding: 64px 56px;
+    background: var(--cream-light);
+    color: var(--ink);
+  }
+  .contact__form h3 {
+    font-family: var(--serif);
+    color: var(--ink);
+    margin-bottom: 8px;
+    font-size: 28px;
+  }
+  .contact__form .lead {
+    font-size: 14.5px;
+    color: var(--muted);
+    margin-bottom: 34px;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .form-field {
+    margin-bottom: 22px;
+  }
+  .form-field label {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--line);
+    background: transparent;
+    padding: 10px 0 12px;
+    font-family: var(--sans);
+    font-size: 15px;
+    color: var(--ink);
+    transition: border-color 0.25s var(--ease);
+  }
+  .form-field input:focus,
+  .form-field select:focus,
+  .form-field textarea:focus {
+    outline: none;
+    border-color: var(--brass);
+  }
+  .form-field textarea { resize: vertical; min-height: 100px; }
+  .contact__form button {
+    margin-top: 12px;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--ink);
+    color: rgba(250, 246, 238, 0.65);
+    padding: 60px 0 32px;
+  }
+  .footer__top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(250, 246, 238, 0.1);
+  }
+  .footer__brand {
+    font-family: var(--serif);
+    font-size: 26px;
+    font-weight: 500;
+    color: var(--cream-light);
+    margin-bottom: 14px;
+  }
+  .footer__tag {
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 300px;
+  }
+  .footer__col h5 {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--brass);
+    font-weight: 500;
+    margin-bottom: 18px;
+  }
+  .footer__col ul { list-style: none; }
+  .footer__col li {
+    padding: 6px 0;
+    font-size: 14px;
+  }
+  .footer__col a {
+    color: rgba(250, 246, 238, 0.75);
+    transition: color 0.25s var(--ease);
+  }
+  .footer__col a:hover { color: var(--brass); }
+  .footer__bottom {
+    padding-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-size: 12px;
+    color: rgba(250, 246, 238, 0.5);
+  }
+  .footer__legal span { margin-right: 22px; }
+  .footer__disclaimer {
+    max-width: 900px;
+    font-size: 11px;
+    line-height: 1.6;
+    color: rgba(250, 246, 238, 0.4);
+    margin-top: 20px;
+  }
+
+  /* Reveal animation */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+  }
+  .reveal.in-view { opacity: 1; transform: translateY(0); }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .hero__grid { grid-template-columns: 1fr; gap: 56px; }
+    .hero__visual { height: 520px; }
+    .about__grid { grid-template-columns: 1fr; gap: 60px; }
+    .about__badge { width: 120px; height: 120px; right: 16px; }
+    .about__badge .num { font-size: 30px; }
+    .markets__grid { grid-template-columns: repeat(2, 1fr); }
+    .services__grid { grid-template-columns: 1fr; }
+    .community__grid { grid-template-columns: 1fr; gap: 56px; }
+    .contact__shell { grid-template-columns: 1fr; }
+    .footer__top { grid-template-columns: 1fr 1fr; }
+    .credentials__row { grid-template-columns: 52px 1fr 80px; }
+    .credentials__row h4 { grid-column: 2 / 3; }
+    .credentials__row .title { grid-column: 2 / 3; margin-top: -12px; }
+    .nav__links { display: none; }
+    .nav__menu-btn { display: grid; }
+  }
+
+  @media (max-width: 640px) {
+    section { padding: 80px 0; }
+    .hero { padding: 130px 0 60px; }
+    .hero__meta { flex-wrap: wrap; gap: 24px; }
+    .hero__ctas { flex-direction: column; align-items: flex-start; gap: 20px; }
+    .markets__grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .contact__left, .contact__form { padding: 44px 28px; }
+    .about__stats { grid-template-columns: 1fr 1fr; }
+    .footer__top { grid-template-columns: 1fr; }
+    .section-head { flex-direction: column; align-items: flex-start; }
+    .nav__phone { display: none; }
+    .nav { padding: 10px 12px; }
+    .nav__brand { font-size: 18px; }
+    .community__visual img:nth-child(1),
+    .community__visual img:nth-child(2) { margin: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="#top" class="nav__brand">
+    Elizabeth Petters<span class="brand-mark"></span>
+  </a>
+  <ul class="nav__links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#markets">Markets</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#credentials">Credentials</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav__cta">
+    <a href="tel:4076833941" class="nav__phone">407.683.3941</a>
+    <a href="#contact" class="btn-pill">
+      Start a Conversation
+      <span class="arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg>
+      </span>
+    </a>
+    <button class="nav__menu-btn" id="menu-btn" aria-label="Menu">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="container">
+    <div class="hero__grid">
+      <div class="hero__copy">
+        <span class="eyebrow">Winter Park · Orlando · Since 2007</span>
+        <h1>
+          A quieter kind of <em>luxury</em>,<br>
+          guided by twenty years of trust.
+        </h1>
+        <p class="hero__sub">
+          Elizabeth Petters is a Coldwell Banker realtor serving Central Florida's most considered neighborhoods — where the right home is rarely the loudest listing on the street.
+        </p>
+        <div class="hero__ctas">
+          <a href="#contact" class="btn-pill">
+            Begin Your Search
+            <span class="arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg>
+            </span>
+          </a>
+          <a href="#about" class="btn-ghost">Meet Elizabeth</a>
+        </div>
+        <div class="hero__meta">
+          <div class="hero__meta-item">
+            <span class="num">20<span style="color:var(--brass)">+</span></span>
+            <span class="label">Years Guiding Orlando Buyers & Sellers</span>
+          </div>
+          <div class="hero__meta-item">
+            <span class="num">2023</span>
+            <span class="label">Orlando's Realtor of the Year</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <img src="assets/img/hero-home.jpg" alt="Modern Winter Park residence at twilight" />
+        <div class="hero__rating">
+          <span class="stars">★★★★★</span>
+          <div class="rating-text">
+            <strong>5-Star</strong>
+            Realtor · 2021
+          </div>
+        </div>
+        <div class="hero__portrait-tag">
+          <img src="assets/img/petters-portrait-orig.jpg" alt="Elizabeth Petters" />
+          <div class="tag-text">
+            <strong>Elizabeth Petters</strong>
+            <span>Coldwell Banker Realty</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about__grid">
+      <div class="about__visual reveal">
+        <div class="about__portrait">
+          <img src="assets/img/petters-portrait-orig.jpg" alt="Elizabeth Petters — Realtor, Coldwell Banker" />
+        </div>
+        <div class="about__badge">
+          <div>
+            <div class="num">20+</div>
+            <div class="label">Years in<br>Real Estate</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about__copy reveal">
+        <span class="eyebrow">About Elizabeth</span>
+        <h2>Real estate as a relationship, not a transaction.</h2>
+        <p>
+          Elizabeth's practice began on the North Shore of Chicago and moved to Orlando in 2007, where she's spent nearly two decades learning the city block by block. She represents first-time buyers, downsizers choosing their next chapter, and investors building long-horizon portfolios — often the same clients across each stage of life.
+        </p>
+        <p>
+          Her approach favors attention over volume: fewer listings, more context. Most new clients arrive through referral from someone she's already represented. That's the measure of the work she's most proud of.
+        </p>
+        <div class="about__stats">
+          <div class="about__stat">
+            <span class="num">2007<sup>·</sup></span>
+            <span class="label">Coldwell Banker Orlando</span>
+          </div>
+          <div class="about__stat">
+            <span class="num">7<sup>+</sup></span>
+            <span class="label">Core Markets Served</span>
+          </div>
+          <div class="about__stat">
+            <span class="num">#1</span>
+            <span class="label">Source: Referral</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKETS -->
+<section class="markets" id="markets">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-head__left reveal">
+        <span class="eyebrow">The Neighborhoods</span>
+        <h2>Seven enclaves, known intimately.</h2>
+      </div>
+      <p class="section-head__intro reveal">
+        Elizabeth's working geography is narrow on purpose. Each of these communities has its own price logic, school zone nuance, and quiet inventory that rarely reaches the MLS.
+      </p>
+    </div>
+
+    <div class="markets__grid">
+      <a href="#contact" class="market-card reveal">
+        <img src="assets/img/nbhd-winter-park.jpg" alt="Winter Park, Florida" />
+        <div class="market-card__content">
+          <span class="market-card__num"><em>№</em> 01</span>
+          <div>
+            <div class="market-card__tag">The Home Base</div>
+            <div class="market-card__name">Winter Park</div>
+          </div>
+        </div>
+      </a>
+      <a href="#contact" class="market-card reveal">
+        <img src="assets/img/nbhd-windermere.jpg" alt="Windermere, Florida" />
+        <div class="market-card__content">
+          <span class="market-card__num"><em>№</em> 02</span>
+          <div>
+            <div class="market-card__tag">Estate Waterfront</div>
+            <div class="market-card__name">Windermere</div>
+          </div>
+        </div>
+      </a>
+      <a href="#contact" class="market-card reveal">
+        <img src="assets/img/nbhd-isleworth.jpg" alt="Isleworth, Florida" />
+        <div class="market-card__content">
+          <span class="market-card__num"><em>№</em> 03</span>
+          <div>
+            <div class="market-card__tag">Gated Luxury</div>
+            <div class="market-card__name">Isleworth</div>
+          </div>
+        </div>
+      </a>
+      <a href="#contact" class="market-card reveal">
+        <img src="assets/img/nbhd-baldwin-park.jpg" alt="Baldwin Park, Florida" />
+        <div class="market-card__content">
+          <span class="market-card__num"><em>№</em> 04</span>
+          <div>
+            <div class="market-card__tag">New Urbanist</div>
+            <div class="market-card__name">Baldwin Park</div>
+          </div>
+        </div>
+      </a>
+      <a href="#contact" class="market-card reveal">
+        <img src="assets/img/nbhd-maitland.jpg" alt="Maitland, Florida" />
+        <div class="market-card__content">
+          <span class="market-card__num"><em>№</em> 05</span>
+          <div>
+            <div class="market-card__tag">Classic Lakeside</div>
+            <div class="market-card__name">Maitland</div>
+          </div>
+        </div>
+      </a>
+      <a href="#contact" class="market-card reveal">
+        <img src="assets/img/nbhd-college-park.jpg" alt="College Park, Florida" />
+        <div class="market-card__content">
+          <span class="market-card__num"><em>№</em> 06</span>
+          <div>
+            <div class="market-card__tag">Walkable Character</div>
+            <div class="market-card__name">College Park</div>
+          </div>
+        </div>
+      </a>
+      <a href="#contact" class="market-card market-card--wide reveal">
+        <img src="assets/img/nbhd-dr-phillips.jpg" alt="Dr. Phillips, Florida" />
+        <div class="market-card__content">
+          <span class="market-card__num"><em>№</em> 07</span>
+          <div>
+            <div class="market-card__tag">Restaurant Row · Sand Lake Road</div>
+            <div class="market-card__name">Dr. Phillips</div>
+            <p class="market-card__desc">Where Orlando goes to dine and where many of its newest buyers settle — luxury homes, top schools, and the most talked-about restaurant corridor in Central Florida.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-head__left reveal">
+        <span class="eyebrow">How I Work</span>
+        <h2>Three practices, one conversation.</h2>
+      </div>
+      <p class="section-head__intro reveal">
+        Whether it's your first home, your last, or your tenth investment property — the process starts the same way: a conversation where I do more listening than selling.
+      </p>
+    </div>
+
+    <div class="services__grid">
+      <div class="service-card reveal">
+        <div class="service-card__img">
+          <img src="assets/img/svc-buyer.jpg" alt="Buyer representation" />
+        </div>
+        <div class="service-card__body">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 11l9-8 9 8v9a2 2 0 0 1-2 2h-4v-7h-6v7H5a2 2 0 0 1-2-2v-9z"/>
+            </svg>
+          </div>
+          <h3>Representing Buyers</h3>
+          <p>
+            First-time buyers receive the same attention as long-time clients. We'll walk the neighborhoods, learn what you actually want (often different from what you said), and move decisively when the right home surfaces.
+          </p>
+          <span class="service-card__cta">Buyer Consultation →</span>
+        </div>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-card__img">
+          <img src="assets/img/svc-seller.jpg" alt="Seller representation" />
+        </div>
+        <div class="service-card__body">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10l-9 10L3 10h6V4h6v6h6z"/>
+            </svg>
+          </div>
+          <h3>Representing Sellers</h3>
+          <p>
+            Editorial-grade staging and photography. Pricing based on current market intelligence, not last year's comps. Discreet off-market options for sellers who prefer not to broadcast. Coldwell Banker's full marketing stack, deployed with care.
+          </p>
+          <span class="service-card__cta">Seller Valuation →</span>
+        </div>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-card__img">
+          <img src="assets/img/svc-investor.jpg" alt="Investor portfolio services" />
+        </div>
+        <div class="service-card__body">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 3v18h18M7 14l4-4 4 4 6-6"/>
+            </svg>
+          </div>
+          <h3>Investor Portfolios</h3>
+          <p>
+            Long-term portfolio building for investors who want Orlando exposure without becoming full-time asset managers. Acquisition, 1031 planning conversations, property-management introductions, and disposition strategy over a multi-year horizon.
+          </p>
+          <span class="service-card__cta">Portfolio Conversation →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section class="credentials" id="credentials">
+  <div class="container">
+    <div class="credentials__head reveal">
+      <span class="eyebrow center">Recognition</span>
+      <h2>A quiet list of loud wins.</h2>
+    </div>
+    <ul class="credentials__list reveal">
+      <li class="credentials__row">
+        <div class="credentials__icon">
+          <svg viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 3h10l-1.5 6.5a4 4 0 0 1-3.5 3H12a4 4 0 0 1-3.5-3L7 3z"/>
+            <path d="M5 5H3v3a3 3 0 0 0 3 3M19 5h2v3a3 3 0 0 1-3 3M12 13v4M9 21h6"/>
+          </svg>
+        </div>
+        <h4>Industry Recognition</h4>
+        <div class="title">Orlando's Realtor of the Year</div>
+        <div class="year">2023</div>
+      </li>
+      <li class="credentials__row">
+        <div class="credentials__icon">
+          <svg viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.9 5.8 21.3l2.4-7.4L2 9.4h7.6z"/>
+          </svg>
+        </div>
+        <h4>Client Service</h4>
+        <div class="title">5-Star Realtor</div>
+        <div class="year">2021</div>
+      </li>
+      <li class="credentials__row">
+        <div class="credentials__icon">
+          <svg viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 21h18M5 21V10l7-6 7 6v11M9 21v-6h6v6"/>
+          </svg>
+        </div>
+        <h4>Brokerage</h4>
+        <div class="title">Coldwell Banker Realty — Winter Park</div>
+        <div class="year">Since 2007</div>
+      </li>
+      <li class="credentials__row">
+        <div class="credentials__icon">
+          <svg viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 7v5l3 2"/>
+          </svg>
+        </div>
+        <h4>Tenure</h4>
+        <div class="title">Twenty years in real estate</div>
+        <div class="year">Chicago · Orlando</div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="testimonial">
+  <div class="container reveal">
+    <span class="eyebrow center" style="color:var(--brass)">What Clients Say</span>
+    <p class="quote">
+      Elizabeth is the rare agent who remembers the details — the shade of cabinet finish you mentioned, the school bus route, the reason you can't live without a screened porch. She represents you before she represents the sale.
+    </p>
+    <div class="attrib">— A Winter Park Client · Referral</div>
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section class="community">
+  <div class="container">
+    <div class="community__grid">
+      <div class="community__copy reveal">
+        <span class="eyebrow">In the Community</span>
+        <h2>Rooted in the city she represents.</h2>
+        <p>
+          Twenty years of real estate in one city also means twenty years in its institutions. Elizabeth's civic life runs alongside her practice — the same people, the same neighborhoods, the same long horizons.
+        </p>
+        <ul class="community__affil">
+          <li>
+            <span class="dot"></span>
+            <div>
+              <strong>Orlando Museum of Art</strong>
+              <span>Member & supporter</span>
+            </div>
+          </li>
+          <li>
+            <span class="dot"></span>
+            <div>
+              <strong>Junior League of Greater Orlando</strong>
+              <span>Women's civic leadership</span>
+            </div>
+          </li>
+          <li>
+            <span class="dot"></span>
+            <div>
+              <strong>Coldwell Banker Realty</strong>
+              <span>Winter Park office · 400 S. Park Avenue</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="community__visual reveal">
+        <img src="assets/img/detail-kitchen.jpg" alt="A Winter Park kitchen interior" />
+        <img src="assets/img/about-interior.jpg" alt="Modern Orlando home interior" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact__shell reveal">
+      <div class="contact__left">
+        <div>
+          <span class="eyebrow">Start the Conversation</span>
+          <h2>A good move begins with a good question.</h2>
+          <p>
+            Whether you're six months from listing or six years from buying — I'd rather hear from you too early than too late. Every question gets a thoughtful answer.
+          </p>
+        </div>
+        <ul class="contact__details">
+          <li>
+            <span class="icon">
+              <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            <div>
+              <span class="label">Phone · Direct</span>
+              <span class="value">407.683.3941</span>
+            </div>
+          </li>
+          <li>
+            <span class="icon">
+              <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M4 4l8 8 8-8"/></svg>
+            </span>
+            <div>
+              <span class="label">Email</span>
+              <span class="value">elizabeth.petters@cbrealty.com</span>
+            </div>
+          </li>
+          <li>
+            <span class="icon">
+              <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <div>
+              <span class="label">Office</span>
+              <span class="value">400 S. Park Ave., Suite 210<br>Winter Park, FL 32789</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <form class="contact__form" onsubmit="return handleContact(event)">
+        <h3>Introduce yourself.</h3>
+        <p class="lead">Fill in what you're comfortable sharing — I'll respond within one business day.</p>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="first">First Name</label>
+            <input id="first" name="first" type="text" required />
+          </div>
+          <div class="form-field">
+            <label for="last">Last Name</label>
+            <input id="last" name="last" type="text" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+          <div class="form-field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" />
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="intent">I'm thinking about…</label>
+          <select id="intent" name="intent">
+            <option>Buying a home</option>
+            <option>Selling a home</option>
+            <option>Both — a move</option>
+            <option>Investment property</option>
+            <option>Just exploring the market</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="msg">Tell me more (optional)</label>
+          <textarea id="msg" name="msg" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn-pill">
+          Send Message
+          <span class="arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          </span>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__col">
+        <div class="footer__brand">Elizabeth Petters</div>
+        <p class="footer__tag">
+          A relational, editorial practice for buyers, sellers, and investors in Central Florida's most considered neighborhoods.
+        </p>
+      </div>
+      <div class="footer__col">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#about">About Elizabeth</a></li>
+          <li><a href="#markets">Markets</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#credentials">Credentials</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Connect</h5>
+        <ul>
+          <li><a href="tel:4076833941">407.683.3941</a></li>
+          <li><a href="mailto:elizabeth.petters@cbrealty.com">Email</a></li>
+          <li><a href="https://www.instagram.com/elizabethpettersrealtor/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.coldwellbankerhomes.com/fl/winter-park/agent/elizabeth-petters/aid_20267/" target="_blank" rel="noopener">Coldwell Banker Page</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Office</h5>
+        <ul>
+          <li>Coldwell Banker Realty</li>
+          <li>400 S. Park Ave., Suite 210</li>
+          <li>Winter Park, FL 32789</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__legal">
+        <span>© <span id="year"></span> Elizabeth Petters · Coldwell Banker Realty</span>
+        <span>All rights reserved.</span>
+      </div>
+      <div class="footer__legal" style="color:rgba(250,246,238,0.45)">Equal Housing Opportunity</div>
+    </div>
+    <p class="footer__disclaimer">
+      Elizabeth Petters is a licensed real estate sales associate in the State of Florida, affiliated with Coldwell Banker Realty. Portrait photography courtesy of Katie Crawford Photography via Orlando Style Magazine. All property imagery is for illustrative purposes and does not represent specific available listings. Equal Housing Opportunity.
+    </p>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll state
+  const nav = document.getElementById('nav');
+  const onScroll = () => {
+    if (window.scrollY > 40) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Reveal-on-scroll
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in-view');
+          io.unobserve(e.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -60px 0px' }
+  );
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Contact stub
+  function handleContact(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button');
+    const original = btn.innerHTML;
+    btn.innerHTML = 'Thank you — I\'ll be in touch shortly.';
+    btn.style.background = 'var(--brass-deep)';
+    setTimeout(() => {
+      btn.innerHTML = original;
+      btn.style.background = '';
+      e.target.reset();
+    }, 4200);
+    return false;
+  }
+
+  // Mobile menu — scroll-to anchors stay functional even with no visible list
+  document.getElementById('menu-btn')?.addEventListener('click', () => {
+    document.querySelector('.nav__links').style.display =
+      document.querySelector('.nav__links').style.display === 'flex' ? 'none' : 'flex';
+  });
+</script>
+
+</body>
+</html>
